@@ -6,6 +6,7 @@ import androidx.core.content.IntentCompat
 import com.example.ecotravel.databinding.ActivityResultBinding
 import java.util.Locale
 
+// activity que muestra el resultado del cálculo de CO2 para un viaje específico
 class ResultActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityResultBinding
@@ -21,6 +22,7 @@ class ResultActivity : AppCompatActivity() {
             return
         }
 
+        // el color del encabezado cambia según el transporte para facilitar la lectura visual
         val color = transportColor(trip.transport)
         binding.headerLayout.setBackgroundColor(color)
         binding.tvEmoji.text = transportEmoji(trip.transport)

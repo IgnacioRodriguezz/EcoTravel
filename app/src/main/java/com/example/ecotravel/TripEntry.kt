@@ -3,6 +3,7 @@ package com.example.ecotravel
 import android.os.Parcel
 import android.os.Parcelable
 
+// data class que representa un viaje calculado; implementa Parcelable para pasarla entre Activities
 data class TripEntry(
     val id: Long,
     val destination: String,
@@ -41,6 +42,7 @@ data class TripEntry(
     }
 }
 
+// devuelve el color asociado a cada medio de transporte para usarlo en UI
 fun transportColor(transport: String): Int = when (transport) {
     "Avión" -> 0xFF1565C0.toInt()
     "Auto" -> 0xFFEF6C00.toInt()
